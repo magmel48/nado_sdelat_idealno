@@ -1,4 +1,17 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
+  margin: 0 auto;
+  font-family: Raleway, Arial, sans-serif;
   position: relative;
   min-width: 800px;
   display: flex;
@@ -15,6 +28,11 @@ body::before {
   pointer-events: none;
 }
 
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
 .page__heading {
   font-size: 116px;
   font-weight: 800;
@@ -28,6 +46,11 @@ body::before {
 
 .page__heading::after {
   content: '*';
+  cursor: default;
+}
+
+.page__heading:hover {
+  color: #4c4c4c;
 }
 
 .page__heading:hover::before {
@@ -39,7 +62,7 @@ body::before {
   font-size: 35px;
   line-height: 100%;
   background-color: #fff;
-  border: #000 2px solid;
+  border: currentColor 2px solid;
   border-radius: 20px;
   box-shadow: #000 0 14px;
   padding: 36px 44px;
@@ -47,6 +70,7 @@ body::before {
   text-transform: none;
   font-weight: 400;
   letter-spacing: initial;
+  color: #000;
 }
 
 .page__background {
